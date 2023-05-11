@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css'
+import 'font-awesome/css/font-awesome.min.css';
 import locale from 'element-plus/es/locale/lang/zh-cn'
 import request from './utils/request';
 import router from './router'
