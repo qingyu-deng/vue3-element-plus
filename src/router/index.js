@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
     {
         path: '/',
@@ -11,10 +11,6 @@ const routes = [
         hidden: true,
         component: () => import('@/components/Login')
     },
-    // {
-    //     path: '*',
-    //     component: () => import('@/components/404')
-    // },
     {
         path: '/home',
         name: '学生管理',
@@ -34,24 +30,12 @@ const routes = [
                 iconClass: 'fa fa-list-alt',
                 component: () => import('@/views/students/InfoList')
             },
-            // {
-            //     path: '/home/infos',
-            //     name: '信息管理',
-            //     iconClass: 'fa fa-list',
-            //     component: () => import('@/views/students/InfoLists')
-            // },
             {
                 path: '/home/work',
                 name: '作业列表',
                 iconClass: 'fa fa-list-ul',
                 component: () => import('@/views/students/WorkList')
             },
-            // {
-            //     path: '/home/works',
-            //     name: '作业管理',
-            //     iconClass: 'fa fa-list-ul',
-            //     component: () => import('@/views/students/WorkMent')
-            // }
         ]
     },
     {
@@ -74,7 +58,7 @@ const routes = [
             },
             {
                 path: '/home/scoremap',
-                name: '分数地图',
+                name: 'Cesium地图',
                 iconClass: 'fa fa-line-chart',
                 component: () => import('@/views/dataAnalys/ScoreMap')
             },
@@ -100,10 +84,12 @@ const routes = [
             }
         ]
     }
+
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes
 })
+
 export default router
